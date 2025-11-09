@@ -1,0 +1,26 @@
+{
+  "name": "lambda-esbuild",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "build": "node build.mjs && tsc --emitDeclarationOnly",
+    "build:js": "node build.mjs",
+    "build:types": "tsc --emitDeclarationOnly",
+    "start:post": "node dist/handlers/post/index.js",
+    "start:pre-sign-up": "node dist/handlers/pre-sign-up/index.js"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.157",
+    "@types/node": "^24.10.0",
+    "@typescript-eslint/eslint-plugin": "^8.46.3",
+    "esbuild": "^0.25.12",
+    "esbuild-plugin-node-externals": "^1.0.1",
+    "eslint": "^9.39.1",
+    "eslint-config-prettier": "^10.1.8",
+    "fast-glob": "^3.3.3",
+    "prettier": "^3.6.2",
+    "typescript": "^5.9.3"
+  },
+  "author": "",
+  "license": "ISC"
+}

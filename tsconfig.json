@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "target": "es2022",                 // Modern JS, matches Node 20 runtime
+    "module": "ESNext",                 // Use ES modules; esbuild will handle output format
+    "moduleResolution": "node",         // Standard Node resolution
+    "rootDir": "src",                    // Keep source code separate
+    "outDir": "dist",                    // Build output
+    "strict": true,                      // Catch errors early
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,             // Support default imports from CommonJS
+    "skipLibCheck": true,                // Faster builds, ignore types of dependencies
+    "incremental": true,                 // Faster subsequent builds
+    "declaration": true,                // Lambdas usually don't need type declarations
+    "sourceMap": true,                   // For debugging
+    "paths": {
+      "@services/*": ["./src/services/*"]
+    },
+    "noUnusedLocals": true,              // Keep code clean
+    "noUnusedParameters": true,
+    "isolatedModules": true,             // Required for esbuild compatibility
+    "resolveJsonModule": true            // Allow importing JSON configs
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist", "**/*.spec.ts"]
+}
